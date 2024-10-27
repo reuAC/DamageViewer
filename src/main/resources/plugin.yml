@@ -1,0 +1,8 @@
+name: DamageViewer
+version: '${project.version}'
+main: io.reuac.damageviewer.DamageViewer
+api-version: '1.13'
+commands:
+  damageviewer:
+    description: "伤害显示"
+    aliases: dver

@@ -1,0 +1,31 @@
+# 该选项为true时，受攻击者为玩家时，才会有伤害显示。
+OnlyPlayer: true
+# 当攻击命中时的信息发送配置。
+Message:
+  # 是否启用信息
+  Enable: true
+  # 是否在远程攻击命中后发送信息
+  OnShot: true
+  # 是否在近战攻击命中后发送信息
+  OnAttack: true
+  # 正常信息
+  normal: "&a%Damager% 你对 %Damagee% 造成了 %Damage_value% 伤害，目前他还剩 %Damagee_Max_Health%/%Damagee_Health% 滴血"
+  # 造成击杀时的信息。
+  die: "&7%Damager% 你对 %Damagee% 造成了 %Damage_value% 伤害，他被你成功击杀了！"
+# 当攻击命中时的屏幕标题发送配置。
+Title:
+  # 是否启用屏幕标题
+  Enable: true
+  # 是否在远程攻击命中后发送屏幕标题
+  OnShot: true
+  # 是否在近战攻击命中后发送屏幕标题
+  OnAttack: true
+  # 正常屏幕标题的主标题
+  normal: "&c&l伤害 &7%Damage_value%"
+  # 正常屏幕标题的副标题
+  normal_sub: "%Damagee_Max_Health%/%Damagee_Health%"
+  # 造成击杀时屏幕标题的主标题
+  die: "伤害 %Damage_value%"
+  # 造成击杀时屏幕标题的主标题
+  die_sub: "成功击杀！"
+
