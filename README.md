@@ -52,8 +52,8 @@ Title:
 `damageviewer.main` 使用重载指令。  
 `damageviewer.onattack.title` **直接**受击时，**标题信息**是否显示。  
 `damageviewer.onattack.message` **直接**受击时，**对话框信息**是否显示。  
-`damageviewer.onattack.title` 受到**远程**攻击时，**标题信息**是否显示。  
-`damageviewer.onattack.message` 受到**远程**攻击时，**对话框信息**是否显示。  
+`damageviewer.onshot.title` 受到**远程**攻击时，**标题信息**是否显示。  
+`damageviewer.onshot.message` 受到**远程**攻击时，**对话框信息**是否显示。  
 
 ## 内置变量
 `%Damager%` 攻击者ID  
