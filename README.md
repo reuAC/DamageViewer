@@ -19,6 +19,8 @@
 ```yaml
 # 该选项为true时，受攻击者为玩家时，才会有伤害显示。
 OnlyPlayer: true
+# 设置显示伤害时，保留几位数小数。
+decimalPlaces: 1
 # 当攻击命中时的信息发送配置。
 Message:
   # 是否启用信息
