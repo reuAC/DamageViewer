@@ -28,7 +28,7 @@ public class MainListener implements Listener {
     static boolean messageOnShot;
     static boolean messageOnAttack;
 
-    static int decimalPlaces;
+    static DecimalFormat df;
 
     @EventHandler
     public void onDamage(EntityDamageByEntityEvent event) {
@@ -86,17 +86,6 @@ public class MainListener implements Listener {
     }
     private String makeString(String style,EntityDamageByEntityEvent event,Player attacker){
         LivingEntity Damagee = (LivingEntity) event.getEntity();
-        StringBuilder patternBuilder = new StringBuilder("#");
-
-        if (decimalPlaces > 0) {
-            patternBuilder.append(".");
-            for (int i = 0; i < decimalPlaces; i++) {
-                patternBuilder.append("#");
-            }
-        }
-
-        String pattern = patternBuilder.toString();
-        DecimalFormat df = new DecimalFormat(pattern);
 
         Double Damagee_Max_Health = Damagee.getMaxHealth();
         Double Damage_value = event.getFinalDamage();

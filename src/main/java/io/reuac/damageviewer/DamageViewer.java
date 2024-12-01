@@ -4,6 +4,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.text.DecimalFormat;
+
 public final class DamageViewer extends JavaPlugin {
 
     static DamageViewer main;
@@ -39,7 +41,19 @@ public final class DamageViewer extends JavaPlugin {
         MainListener.titleOnAttack = getConfig().getBoolean("Title.OnAttack");
         MainListener.messageOnShot = getConfig().getBoolean("Message.OnShot");
         MainListener.messageOnAttack = getConfig().getBoolean("Message.OnAttack");
-        MainListener.decimalPlaces = getConfig().getInt("decimalPlaces");
+        int decimalPlaces = getConfig().getInt("decimalPlaces");
+
+        StringBuilder patternBuilder = new StringBuilder("#");
+
+        if (decimalPlaces > 0) {
+            patternBuilder.append(".");
+            for (int i = 0; i < decimalPlaces; i++) {
+                patternBuilder.append("#");
+            }
+        }
+
+        String pattern = patternBuilder.toString();
+        MainListener.df = new DecimalFormat(pattern);
     }
 
     @Override
