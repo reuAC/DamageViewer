@@ -39,6 +39,7 @@ public final class DamageViewer extends JavaPlugin {
         MainListener.titleOnAttack = getConfig().getBoolean("Title.OnAttack");
         MainListener.messageOnShot = getConfig().getBoolean("Message.OnShot");
         MainListener.messageOnAttack = getConfig().getBoolean("Message.OnAttack");
+        MainListener.decimalPlaces = getConfig().getInt("decimalPlaces");
     }
 
     @Override
